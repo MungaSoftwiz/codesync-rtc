@@ -23,7 +23,7 @@ When providing code suggestions:
         model="meta-llama/llama-3.3-70b-instruct:free",
         messages=[
             {"role": "system", "content": system_prompt},
-            {"role": "system", "content": prompt},],
+            {"role": "user", "content": prompt},],
     )
     return response.choices[0].message.content
 
@@ -53,6 +53,6 @@ The simplest solution is to convert the integer to a string first using the str(
         model="deepseek/deepseek-r1-distill-llama-70b:free",
         messages=[
             {"role": "system", "content": system_prompt},
-            {"role": "system", "content": f"Please explain this error: {error_message}",},],
+            {"role": "user", "content": f"Please explain this error: {error_message}",},],
     )
     return response.choices[0].message.content
