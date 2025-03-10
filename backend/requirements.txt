@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+fastrtc
+pydantic
+openai
+black
+pyjwt
+python-multipart
+python-jose[cryptography]
